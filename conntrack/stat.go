@@ -25,9 +25,10 @@ func Stat(fname string) (*StatResultList, error) {
 		if err != nil && (i > 0 && strings.Contains(err.Error(), "Probably a header")) {
 			return nil, err
 		}
-
-		result.Append(sr)
-		i++
+		if sr != nil {
+			result.Append(sr)
+			i++
+		}
 	}
 
 	if err := scanner.Err(); err != nil {
