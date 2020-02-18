@@ -10,7 +10,6 @@ import (
 func GetConnections(filename string) (*EntryList, error) {
 	// Not working yet
 	el := NewEntryList()
-	return el, nil
 
 	fd, err := os.Open(filename)
 	if err != nil {

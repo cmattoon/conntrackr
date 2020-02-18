@@ -32,7 +32,7 @@ func NewEntryFromFields(fields []string) (*Entry, error) {
 }
 
 func _xf(field string) string {
-	return strings.SplitN(field, "=", 1)[1]
+	return strings.Split(field, "=")[1]
 }
 
 // Sets src/dst pairs
